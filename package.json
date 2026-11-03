@@ -1,7 +1,7 @@
 {
-  "name": "@thrift-shop/site",
+  "name": "rewear",
   "version": "0.1.0",
-  "description": "A beautiful e-commerce template with a flat design.",
+  "description": "Rewear is a web application that allows users to share and discover sustainable fashion.",
   "engines": {
     "npm": ">=3"
   },
@@ -26,7 +26,6 @@
     "open:cover": "npm run test:cover && open coverage/lcov-report/index.html",
     "analyze-bundle": "babel-node ./tools/analyzeBundle.js"
   },
-  "author": "Arshad Khan <arshdkhn1@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.16.1",
@@ -71,7 +70,7 @@
     "enzyme": "2.6.0",
     "eslint": "3.12.2",
     "eslint-plugin-import": "2.2.0",
-    "eslint-plugin-react": "6.8.0",
+    "eslint-plugin-react": "7.20.0",
     "eslint-watch": "2.1.14",
     "extract-text-webpack-plugin": "2.0.0-beta.4",
     "file-loader": "0.9.0",
@@ -80,7 +79,7 @@
     "jest": "18.1.0",
     "json-loader": "0.5.4",
     "mockdate": "2.0.1",
-    "node-sass": "4.0.0",
+    "node-sass": "npm:sass@1.89.2",
     "npm-run-all": "3.1.2",
     "open": "0.0.5",
     "postcss-loader": "1.2.1",
@@ -98,23 +97,22 @@
     "webpack-hot-middleware": "2.13.2",
     "webpack-md5-hash": "0.0.5"
   },
-  "keywords": [
-    "react",
-    "redux",
-    "ecommerce",
-    "Arshad Khan",
-    "react-slingshot",
-    "express",
-    "node"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/arshdkhn1/react-redux-template-for-ecommerce-site.git"
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "\\.(css|scss)$": "identity-obj-proxy",
-      "^.+\\.(gif|ttf|eot|svg|woff|woff2|ico)$": "<rootDir>/tools/fileMock.js"
+  "overrides": {
+    "eslint": {
+      "shelljs": "0.8.5",
+      "debug": "4.4.1"
+    },
+    "body-parser": {
+      "debug": "4.4.1"
+    },
+    "eslint-plugin-import": {
+      "debug": "4.4.1"
+    },
+    "babel-core": {
+      "debug": "4.4.1"
+    },
+    "babel-traverse": {
+      "debug": "4.4.1"
     }
   }
 }
